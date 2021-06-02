@@ -1,118 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Harmony</title>
-    <style>
-        @font-face {
-  font-family: "My Custom Font";
-  src: url(https://www.1001fonts.com/uni-sans-font.html) format("truetype");
-  font-weight: bold;
-  
-}
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Harmony</title>
 
-p.customfont {
-    font-family: "My Custom Font", Uni Sans;
-}
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@900&display=swap" rel="stylesheet">
 
-div {
-  font-family: "My Custom Font";
-}
-    </style>
+  <style>
+    body{font-family: 'Fira Sans', sans-serif;}
+
+    .avatar {
+      border-radius: 100%;
+    }
+
+    .avatar:hover {
+      border-radius: 20px;
+    }
+  </style>
 </head>
-<body style = "background-color: #36393e">
 
-<div style="display:inline-block;vertical-align:top;">
-    <img src="discord.png" alt="img" width="120" height="120"/>
-</div>
-<div style="display:inline-block; color:white; font-size: 100px;" class="customfont">
+<body style="background-color: #36393e">
+
+  <div style="display:inline-block;vertical-align:top;">
+    <img src="discord.png" alt="img" width="120" height="120" />
+  </div>
+  <div style="display:inline-block; color:white; font-size: 100px;" class="customfont">
     <div>DISCORD</div>
-</div>
-
-<hr>
-
-<div class="row">
-  <div class="column">
-    <div style="padding: 0 0 0 340px;">
-      <img src="wumpus3.png" alt="lol" width="480" height="320">
-     </div>
   </div>
-</div>
 
-<div>
-  <div class="row">
-    <div class="column">
-      <img class="img__img" src="image0.jpg" width="120" height="120" 
-      onclick="alert('You have been banned from Annoying Orange Official')" 
-      onmouseover="style='border-radius:20px;'" onmouseout="style='border-radius:999px;'" 
-      title="Annoying Orange Official" style='border:0px; border-radius:999px; -webkit-border-radius:999px;'/>
-    </div>
+  <hr>
+
+  <div>
+      <div style="padding: 0 0 0 340px;">
+        <img src="wumpus3.png" alt="lol" width="480" height="320">
+      </div>
   </div>
-</div>
 
-<div>
-  <div class="row">
-    <div class="column">
-      <img class="img__img" src="swagdog.png" width="120" height="120"
-      onclick="alert('You have been banned from new server')" 
-      onmouseover="style='border-radius:20px;'" onmouseout="style='border-radius:999px;'" 
-      title="new server" style='border:0px; border-radius:999px; -webkit-border-radius:999px;'/>
-    </div>
+  <div>
+      <img src="image0.jpg" id="orange" width="120" height="120" class="avatar" 
+      onclick="hide_image('orange')"
+      title="Annoying Orange Official">
   </div>
-</div>
 
-<div>
-  <div class="row">
-    <div class="column">
-      <img class="img__img" src="Brugd.jpg" width="120" height="120" 
-      onclick="alert('You have been banned from water ice salt')" 
-      onmouseover="style='border-radius:20px;'" onmouseout="style='border-radius:999px;'" 
-      title="water ice salt" style='border:0px; border-radius:999px; -webkit-border-radius:999px;'/>
-    </div>
+  <div>
+      <img src="swagdog.png" id="dog" width="120" height="120" class="avatar"
+      onclick="hide_image('dog')" 
+      title="new server"
+      >
   </div>
-</div>
 
-<p id="demo"></p>
+  <div>
+      <img src="Brugd.jpg" id="sharkpog" width="120" height="120" class="avatar"
+      onclick="hide_image('sharkpog')"
+      title="water ice salt">
+  </div>
 
-<hr>
+  <p id="demo"></p>
 
-<button onclick="myFunction()"> 
-  Join server
-</button>
+  <hr>
 
-<script>
-// var arrayImg = new Array();
-arrayImg[0] = "100x100";
-arrayImg[1] = "150x150";
-arrayImg[2] = "200x200";
-arrayImg[3] = "250x250";
-arrayImg[4] = "300x300";
-arrayImg[5] = "350x350";
-arrayImg[6] = "400x400";
+  <button onclick="myFunction()">
+    Join server
+  </button>
 
-
-// getRandomImage(arrayImg, "");
-
-// function getRandomImage(imgAr, path) 
-{
-    path = path || 'http://fpoimg.com/'; // default path here
-    var num = Math.floor( Math.random() * imgAr.length );
-    var img = imgAr[ num ];
-    var imgStr = '<img src="' + path + img + '" alt = "">';
-    document.write(imgStr); document.close();
-}
+  <script>
+    // var arrayImg = new Array();
+    arrayImg[0] = "100x100";
+    arrayImg[1] = "150x150";
+    arrayImg[2] = "200x200";
+    arrayImg[3] = "250x250";
+    arrayImg[4] = "300x300";
+    arrayImg[5] = "350x350";
+    arrayImg[6] = "400x400";
 
 
-  function myFunction() {
-    document.getElementById("demo").innerHTML =
-    myImage = new Image(120, 120);
-    myImage.src = 'capybara.jpg';
-    document.body.appendChild(myImage);
-    ;
-  }
-</script>
+    // getRandomImage(arrayImg, "");
+
+    // function getRandomImage(imgAr, path) 
+    {
+      path = path || 'http://fpoimg.com/'; // default path here
+      var num = Math.floor(Math.random() * imgAr.length);
+      var img = imgAr[num];
+      var imgStr = '<img src="' + path + img + '" alt = "">';
+      document.write(imgStr); document.close();
+    }
+
+
+    function myFunction() {
+      document.getElementById("demo").innerHTML = myImage = new Image(120, 120); myImage.src = 'capybara.jpg';
+      document.body.appendChild(myImage);
+      ;
+    }
+  </script>
+
+  <script>
+    function hide_image(id) {
+      console.log(id)
+      alert('You have been banned from the server')
+      document.getElementById(id).style.display = 'none';
+    }
+  </script>
 
 </body>
+
 </html>
